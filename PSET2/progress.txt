@@ -1,1 +1,26 @@
 2/18/2026: Christine downloaded data for first 2 parts of project.
+
+2/21/2026: Christine
+Cleaned data and created wide testing and full datasets
+- AI used to figure out syntax for pivoting dataframe and code debugging (figuring out difference in n)
+Did simulation of k = 1 lag
+- AI used to figure out how to handle N/A values
+Did general strategy of families
+- AI used to figure out how to structure and turn a dictionary into a dataframe
+- Also used AI to figure out why I was getting initially suspicious high returns for the strategy
+- Noticing suspiciously high returns for the strategy at lag k = 1, but drops down to reasonable levels at k = 2 onwards
+
+Update To Date:
+Section 1 Parts a, b, and e are done. I'm in the middle of Part d right now. Section 2 Part a is also done (per your suggestion on starting with Section 2 first)
+There is a problem when you see the return dataframe across k lags. The k = 1 strategy return and volatility are way too high, given they're in annualized decimal
+form, not percentage form. I tried to address it by figuring out ways to handle the NaN values at different points in the dataset (main strategy there to fill into
+0s, which I'd appreciate your assessment on). This addressed the issue slightly, but the returns are still way too high.
+
+I checked my code and really think there is no time travel, but please check me there. The unusualness seems to go away for k = 2-5 lags.
+
+I was trying to contemplate ways to ID the outliers in Part d, but the work is unfinished. There are a few days where the strategy has 13-17% returns in one day,
+and I wrote code to identify those top dates. I'm thinking we can try to ID which stocks (and their weights) are exactly contributing to this high return that I think
+is causing the high return. The current data I pulled from SQL has the "id" number but not the stock name, so I'm going to venture back into SQLServer and see if I can
+find those stock names for us, and we can see if there is company-specific news or anything on those dates.
+
+Any other ideas you have of course is very respected and appreciated. Thank you for your patience.
